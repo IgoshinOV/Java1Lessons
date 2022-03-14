@@ -15,7 +15,7 @@ public class HomeWorkApp3 {
         int[] balance = {2, 2, 2, 1, 2, 2, 10, 1};
         System.out.println(checkBalance(balance));
         int[] arrays = {1, 2, 3, 4, 5, 6, 7};
-        swapArray(arrays, -2);
+        swapArray(arrays, -1);
     }
 
     public static void invertArray() {
