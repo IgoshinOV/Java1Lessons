@@ -12,7 +12,7 @@ public class HomeWorkApp3 {
         fillDiagonal();
         System.out.println(Arrays.toString(returnArray(4, 1)));
         findMaxMin();
-        int[] balance = {2, 2, 2, 1, 2, 2, 10, 1};
+        int[] balance = {1, 1, 1, 4};
         System.out.println(checkBalance(balance));
         int[] arrays = {1, 2, 3, 4, 5, 6, 7};
         swapArray(arrays, -1);
@@ -50,9 +50,11 @@ public class HomeWorkApp3 {
 
     public static void fillDiagonal() {
         int[][] array = new int[6][6];
+        int lastIndex = array.length - 1;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 array[i][i] = 1;
+                array[i][lastIndex - i] = 1;
                 System.out.print(array[i][j] + " ");
             }
             System.out.println();
@@ -74,7 +76,8 @@ public class HomeWorkApp3 {
         for (int i = 1; i < array.length; i++) {
             if (array[i] < min) {
                 min = array[i];
-            } else if (array[i] > max) {
+            }
+            if (array[i] > max) {
                 max = array[i];
             }
         }
@@ -82,7 +85,7 @@ public class HomeWorkApp3 {
     }
 
     public static boolean checkBalance(int[] array) {
-        int sum = 0;
+        double sum = 0;
         for (int i : array) {
             sum += i;
         }
@@ -98,21 +101,22 @@ public class HomeWorkApp3 {
     }
 
     public static void swapArray(int[] array, int n) {
+        int shiftNumber = n % array.length;
         if (n > 0) {
-            for (int i = 0; i < n; i++) {
-                int var = array[array.length - 1];
+            for (int i = 0; i < shiftNumber; i++) {
+                int num = array[array.length - 1];
                 for (int j = array.length - 1; j > 0; j--) {
                     array[j] = array[j - 1];
                 }
-                array[0] = var;
+                array[0] = num;
             }
         } else {
-            for (int i = 0; i > n; i--) {
-                int var = array[0];
+            for (int i = 0; i > shiftNumber; i--) {
+                int num = array[0];
                 for (int j = 1; j < array.length; j++) {
                     array[j - 1] = array[j];
                 }
-                array[array.length - 1] = var;
+                array[array.length - 1] = num;
             }
         }
         System.out.println(Arrays.toString(array));
