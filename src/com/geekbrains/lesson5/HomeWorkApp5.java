@@ -15,6 +15,10 @@ public class HomeWorkApp5 {
         employeesArray[4] = new Employee("Dudochkin Nikolay", "Engineer", "Nikolay@mailbox.com", "892312444",
                 900000, 60);
 
+        employeeSelection(employeesArray);
+    }
+
+    public static void employeeSelection(Employee[] employeesArray) {
         for (Employee employee : employeesArray) {
             if (employee.getAge() > 40) {
                 employee.employeesOverForty();
