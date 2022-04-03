@@ -9,14 +9,6 @@ public class Animal {
         counterAnimals++;
     }
 
-    public void run(int distance) {
-        System.out.println(printName() + " пробежал " + distance + " метров.");
-    }
-
-    public void swim(int distance) {
-        System.out.println(printName() + " проплыл " + distance + " метров.");
-    }
-
     public String printName() {
         return name;
     }
