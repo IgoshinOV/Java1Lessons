@@ -6,13 +6,11 @@ public class HomeWorkApp6 {
         Cat cat2 = new Cat("Jo");
         Cat cat3 = new Cat("lo");
         Dog dog1 = new Dog("Jec");
-        Animal ostrich = new Animal("Voodi");
 
         cat1.run(150);
         cat2.run(300);
         cat3.swim(20);
         dog1.swim(7);
-        ostrich.run(1000);
         printNumberOfOrders();
     }
 

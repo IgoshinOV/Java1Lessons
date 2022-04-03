@@ -8,7 +8,6 @@ public class Cat extends Animal {
         counterCats++;
     }
 
-    @Override
     public void run(int distance) {
         if (distance <= 200) {
             System.out.println("Кот " + printName() + " пробегает " + distance + " метров.");
@@ -17,7 +16,6 @@ public class Cat extends Animal {
         }
     }
 
-    @Override
     public void swim(int distance) {
         System.out.println("Кот " + printName() + " не умеет плавать.");
 
