@@ -57,7 +57,7 @@ public class HomeWorkApp8 extends JFrame {
                     value += 10;
                 } else if (e.getSource() == decrement10Button) {
                     value -= 10;
-                } else if (e.getSource() == resetButton){
+                } else if (e.getSource() == resetButton) {
                     value = 0;
                 }
                 counterValueView.setText(String.valueOf(value));
